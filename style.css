@@ -1,0 +1,173 @@
+/* Configurações Gerais - Estilo Dark/Futuristic Gemini */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body {
+    background-color: #131314; /* Fundo escuro oficial de interfaces de IA */
+    color: #e3e3e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Principal (Janela do Chat) */
+.container {
+    background-color: #1e1f20;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    max-width: 550px;
+    width: 100%;
+    border: 1px solid #2d2f31;
+}
+
+/* Título com o Gradiente característico da IA */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    background: linear-gradient(45deg, #4285f4, #9b72cb, #d96570);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+p.subtitle {
+    color: #9aa0a6;
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Barra de Input estilo "Prompt de Comando" */
+.search-box {
+    display: flex;
+    background-color: #131314;
+    border: 1px solid #3c4043;
+    border-radius: 30px;
+    padding: 6px 6px 6px 20px;
+    align-items: center;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 25px;
+}
+
+.search-box:focus-within {
+    border-color: #a87ffb;
+    box-shadow: 0 0 0 1px #a87ffb;
+}
+
+input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #e3e3e3;
+    font-size: 16px;
+    outline: none;
+    padding: 10px 0;
+}
+
+input::placeholder {
+    color: #80868b;
+}
+
+/* Botão Redondo com Ícone ou Texto Curto */
+button {
+    background: linear-gradient(135deg, #1a73e8, #7622ff);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* O "Balão de Resposta" da IA */
+.result-box {
+    margin-top: 15px;
+    padding: 24px;
+    background-color: #1e1f20;
+    border-radius: 16px;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 15px;
+    border: 1px solid #2d2f31;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Ícone/Nome da IA simulado acima da resposta */
+.ai-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #c4c7c5;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+/* Sparkle/Brilho da IA (Ponto roxo/azul) */
+.ai-avatar {
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(45deg, #7a22ff, #00d2ff);
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.result-text {
+    color: #e3e3e3;
+}
+
+.result-text strong {
+    color: #a87ffb; /* Destaca os dados em roxo */
+}
+
+/* Estilo para Mensagens de Erro */
+.result-box.error {
+    border-color: #f28b82;
+    background-color: #2d1f21;
+}
+.result-box.error .ai-avatar {
+    background: #f28b82;
+}
+.result-box.error .result-text {
+    color: #f28b82;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Efeito de carregamento piscando (Pulse) */
+.loading {
+    color: #9aa0a6;
+    font-style: italic;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
