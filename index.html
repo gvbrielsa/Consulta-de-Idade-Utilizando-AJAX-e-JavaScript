@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas de Nomes - Idade Estimada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        
+        <div class="panel query-panel">
+            <h1>Estimativa de Idade</h1>
+            <p class="subtitle">Insira um nome para consultar a idade média estimada com base em registros demográficos globais.</p>
+            
+            <div class="search-box">
+                <input type="text" id="nameInput" placeholder="Digite um nome... (ex: Maria)">
+                <button id="searchBtn">Consultar</button>
+            </div>
+
+            <div id="result" class="result-box hidden"></div>
+        </div>
+
+        <div class="panel stats-panel">
+            <h2>Nomes mais Populares (Brasil)</h2>
+            <div class="columns-container">
+                
+                <div class="stats-column">
+                    <h3>Masculinos</h3>
+                    <ol>
+                        <li>Miguel</li>
+                        <li>Arthur</li>
+                        <li>Gael</li>
+                        <li>Théo</li>
+                        <li>Heitor</li>
+                        <li>Ravi</li>
+                        <li>Alejandro</li>
+                        <li>Noah</li>
+                        <li>Samuel</li>
+                        <li>Bernardo</li>
+                    </ol>
+                </div>
+
+                <div class="stats-column">
+                    <h3>Femininos</h3>
+                    <ol>
+                        <li>Helena</li>
+                        <li>Alice</li>
+                        <li>Laura</li>
+                        <li>Maria Alice</li>
+                        <li>Sophia</li>
+                        <li>Manuela</li>
+                        <li>Maitê</li>
+                        <li>Liz</li>
+                        <li>Cecília</li>
+                        <li>Isabella</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
